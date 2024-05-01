@@ -13,7 +13,7 @@ export const ConditionCommentMacroPlugin = (options: {
         setup(build) {
             build.onLoad({ filter: /\.(ts|js)?$/ }, args => {
                 if (args.path.includes('node_modules')) {
-                    console.log(`${args.path}; library; skipping`);
+                    // console.log(`${args.path}; library; skipping`);
                     return;
                 }
                 const source = readFileSync(args.path, 'utf8');
